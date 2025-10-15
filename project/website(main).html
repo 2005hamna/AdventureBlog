@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title style="color: rgb(255, 85, 0);">Into The Unknown Ventures</title>
+
+  <!-- Link to Font Awesome library -->
+  <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Basic CSS styles */
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url(ad7e6e3520f3b23bfad2fddb6eb1fbfb.jpg);
+        background-size: cover;
+        background-position: center;
+        color: rgb(155, 65, 16);
+        height: 600px; /* Adjust the height value as needed */
+    }
+
+
+.box-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-item {
+    flex: 1; /* Each box will take up equal space */
+    padding: 20px;
+    background-color: #f0f0f0; /* Set the background color for the boxes */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth and shading */
+}
+
+.about-item h3 {
+    margin-bottom: 10px;
+}
+
+.about-item p {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Set the text color */
+}
+
+
+
+    .header-container {
+      background-image: url(8eda0c0b45d93c5daae6dafdb5166384.jpg); /* add image to the background of the header */
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+    }
+    
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #fff; /* Add white color to the title */
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px; /* Add rounded corners */
+      transition: background-color 0.3s; /* Add transition effect */
+    }
+
+    nav ul li a:hover {
+      background-color: #ddcccc; /* Change background color on hover */
+    }
+
+    .active {
+      background-color: #ddcccc;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #070707;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .main-content {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .images-container {
+      flex: 1;
+    }
+
+    .slider-frame {
+      overflow: hidden;
+      height: 400px; /* Adjust the height as needed */
+      width: 50%; /* Adjust the width as needed */
+      margin-top: 20px;
+    }
+
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    }
+
+    .slides {
+      max-width: 100%; /* Adjust as needed */
+      max-height: 100%; /* Adjust as needed */
+      width: 800px; /* Ensure image maintains aspect ratio */
+      height: 450px; /* Ensure image maintains aspect ratio */
+    }
+
+    .slider-frame {
+  overflow: hidden;
+  height: 400px; /* Adjust the height as needed */
+  width: 50%; /* Adjust the width as needed */
+  margin-top: 20px;
+  border: 4px solid #ff7225; /* Add border around the slider frame */
+  border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.welcome-text {
+  flex: 1;
+  padding: 20px; /* Add padding to match border */
+  text-align: center;
+  color: #ed5e10;
+  border-radius: 10px; /* Add border radius for rounded corners */
+  margin-top: 90px; /* Adjust margin to match slider-frame */
+}
+
+.welcome-container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top of the container */
+}
+
+.welcome-text h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.welcome-text p {
+  color: #ff7225;
+  font-size: 18px;
+}
+
+
+    .explore-button {
+      background-color: #f27e12;
+      color: rgb(0, 0, 0);
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .explore-button:hover {
+      background-color: #555;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif; /* Change 'Arial' to the desired font family */
+}
+
+
+        nav.navigation {
+        width: calc(100% ); /* Subtracting the total left and right padding */
+        background-color: rgb(209, 109, 37);
+        padding: 10px 20px;
+        margin: 0; /* Add this to remove any default margin */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav.navigation ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav.navigation ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav.navigation ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav.navigation ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    nav.navigation ul li a:hover {
+      background-color: #eab38a;
+    }
+
+    /* Search bar styles */
+    .search-bar {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+      padding: 8px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .search-bar input[type="submit"] {
+      padding: 8px 15px;
+      background-color: #ddcccc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .search-bar input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    .about-bewelcome {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px; /* Adjust as needed */
+    }
+
+    .about-text {
+      max-width: 800px; /* Adjust as needed */
+      text-align: center;
+    }
+
+    .about-item {
+    width: 300px; /* Adjust the width as needed */
+    margin-bottom: 30px; /* Adjust as needed */
+}
+.rectangular-image {
+    width: 1520px; /* Set the desired width */
+    height: 500px; /* Set the desired height */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 60px; /* Add more space above the image */
+    margin-bottom: 10px;
+}
+
+.rectangular-box2 {
+    background-color: #ff9350; /* Background color */
+    padding: 20px; /* Padding around the content */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center-align the text */
+    border: 2px solid #010101; /* Add border */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 20px; /* Add padding */
+    margin-bottom: 80px; /* Add margin to create space after the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Add a box shadow for depth and shading */
+}
+
+  </style>
+</head>
+<body>
+  <nav></nav>
+  <div class="header-container">
+    <div class="header-content">
+      <h1>Into The Unknown Ventures</h1>
+    </div>
+    <nav class="navigation">
+      <ul>
+        <li><a href="website(main).html" class="active">Home</a></li>
+        <li><a href="contact-form.html">Contact</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">About &#9660;</a>
+          <div class="dropdown-content">
+            <a href="aboutme.html">About Me</a>
+            <a href="aboutwebsite.html">About The Website</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Destinations &#9660;</a>
+          <div class="dropdown-content">
+            <a href="countries.html">Pakistan</a>
+            <a href="countries.html">Kuwait</a>
+            <a href="countries.html">Saudi Arabia</a>
+            <a href="countries.html">Qatar</a>
+            <a href="countries.html">UAE</a>
+            <a href="countries.html">Bahrain</a>
+            <a href="countries.html">Turkey</a>
+            <a href="countries.html">Azerbaijan</a>
+            <a href="countries.html">United Kingdom</a>
+            <!-- Add more countries as needed -->
+          </div>
+        </li>
+        <li><a target="_blank" href="joinus.html" class="join-us-button" >Join Us</a></li>
+        <li><a href="healthyeating.html">Healthy Eating</a></li> <!-- Added Healthy Eating button -->
+  
+    
+  
+        
+      </ul>
+      <!-- Search bar -->
+      <div class="search-bar">
+        <form action="#" method="get">
+          <input type="text" name="search" placeholder="Search...">
+          <input type="submit" value="Search">
+        </form>
+      </div>
+    </nav>
+  </div>
+  <script>
+    document.getElementById("searchForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        
+        // Get the search query from the input field
+        var searchQuery = document.getElementById("searchInput").value.trim();
+        
+        // Perform the search operation (replace this with your search logic)
+        alert("Searching for: " + searchQuery);
+        
+        // Optionally, you can redirect the user to a search results page
+        window.location.href = "contact-form.html?query=" + encodeURIComponent(searchQuery);
+
+    });
+</script>
+
+
+  <section class="main-content">
+    <!-- Main content of your homepage goes here -->
+    <div class="welcome-container">
+      <div class="slider-frame">
+        <div class="slideshow-container">
+          <img src= "C:\project\WhatsApp Image 2024-04-15 at 00.49.55_5b8857fd.jpg" class="slides">
+        </div>
+      </div>
+      <div class="welcome-text">
+        <h2>Welcome to Into The Unknown Ventures!</h2>
+        <p>Dive into a world of exploration and discovery with us. Whether it's hiking through breathtaking landscapes, diving into vibrant cultures, or simply seeking out new experiences, we're here to fuel your sense of adventure. Let's make memories that last a lifetime together! Explore the unknown and unlock endless possibilities. Embark on journeys that redefine your limits and enrich your soul, creating stories that inspire and captivate. Join us as we traverse the paths less traveled, discovering the beauty of the world and the depths of our own existence.</p>
+        <a href="https://www.google.com" class="explore-button">Explore More</a>
+
+      </div>
+    </div>
+  </section>
+  <style>
+        
+    h1{
+        text-align:center;
+        font-size:40px;
+    }
+    .gallery{
+        width:100%;
+        height:80%;
+        display: flex;
+        margin:5% auto 0;
+        box-sizing: border-box;
+        
+    }
+    .image-gallery{
+        width:100%;
+        margin-left:2%;
+        flex-grow:1;
+        flex-basis:0;
+        transition:0.5s;
+    }
+    .image-gallery img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        transition:0.5s;
+    
+    }
+    .image-gallery:hover{
+        flex-basis:30%;
+    }
+    .image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px; /* Adjust the value to make the edges more or less round */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adjust the shadow properties as needed */
+}
+.image-text {
+    position: absolute;
+    bottom: 10px; /* Adjust the distance from the bottom */
+    left: 10px; /* Adjust the distance from the left */
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the background color and opacity */
+    padding: 5px; /* Adjust the padding around the text */
+    border-radius: 5px; /* Adjust the border radius */
+}
+.image-gallery {
+    position: relative;
+}
+.cookie-accept {
+      display: flex;
+      align-items: center;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .cookie-accept i {
+      margin-right: 5px;
+    }
+
+    
+        </style>
+    
+        <div class="gallery">
+            <div class="image-gallery">
+                <img src="C:\project\WhatsApp Image 2024-04-17 at 13.19.09_05e9834f.jpg">
+                <div class="image-text">Adventure in Pakistan</div>
+            </div>
+            <div class="image-gallery">
+                <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.40_67e2c7cf.jpg">
+                <div class="image-text">Island in Kuwait</div>
+            </div>
+            <div class="image-gallery">
+                <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.41_8cd44bac.jpg">
+                <div class="image-text">Day out in Bahrain</div>
+            </div>
+            <div class="image-gallery">
+                <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.42_94da26c0.jpg">
+                <div class="image-text">Exploring Turkey</div>
+            </div>
+            <div class="image-gallery">
+                <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.43_8489fc6b.jpg">
+                <div class="image-text">Beautiful UAE</div>
+            </div>
+            
+    
+        </div>
+  <section class="about-bewelcome">
+    <div class="about-text">
+        <h2>What can you explore?</h2><!-- the title for the boxes-->
+        <div class="box-container"><!-- class about all the items in the boxes and what each of them contains-->
+            <div class="about-item">
+                <h3>Travel</h3>
+                <p>You want to travel the world or just visit the city down the road? Organise your journey through BeWelcome and meet nice people on the way...</p>
+            </div>
+            <div class="about-item">
+                <h3>Host</h3>
+                <p>We want to make sharing and meeting not only fun but also easy. Our tools and features help with that...</p>
+            </div>
+            <div class="about-item">
+                <h3>Share</h3>
+                <p>At this platform we believe sharing creates a better world. We share experiences, moments, knowledge and we welcome guests in our homes, if we can...</p>
+            </div>
+            <div class="about-item">
+              <h4>New Experiences</h4>
+                <p>At this platform we believe sharing creates a better world. We share experiences, moments, knowledge and we welcome guests in our homes, if we can...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<img src="C:\project\WhatsApp Image 2024-04-16 at 08.29.15_fa677cfc.jpg" alt="Description of the image" class="rectangular-image">
+<p style="text-align: center; margin-bottom: 80px;">This is a picture of <a href="https://en.wikipedia.org/wiki/Badshahi_Mosque" target="_blank">Baadshahi Masjid</a>.</p>
+
+<div class="rectangular-box2">
+  <p>Explore the world with me as we embark on an adventure filled with breathtaking landscapes, vibrant cultures, and unforgettable experiences. Together, we'll delve into the heart of diverse destinations, unraveling their hidden treasures and immersing ourselves in their rich histories. From the majestic peaks of towering mountains to the tranquil shores of pristine beaches, each journey promises discovery and wonder. Let's forge unforgettable memories and create stories that resonate with the spirit of exploration. Join me on this journey of discovery, where every step brings us closer to the beauty and diversity of our remarkable world.</p>
+</div>
+<div class="cookie-accept">
+  <a href="html&js.html"><i class="fas fa-cookie-bite" style="color: rgb(255, 255, 255); font-size: 24px;"></i> </a> This website uses cookies for better experience..
+</div>
+
+
+
+  <footer>
+    <!-- Footer content goes here -->
+    <ul style="display: flex;">
+        <li style="margin-right: 10px;"><a href="https://www.instagram.com/for_you_love_bts?igsh=b2FpZTN6dHdzZ2Zw"><i class="fa-brands fa-square-instagram" style="color: rgb(255, 255, 255); font-size: 24px;"></i></a></li>
+        <li style="margin-right: 10px;"><a href="https://github.com/Erwin-is-me"><i class="fa-brands fa-square-github" style="color: rgb(255, 255, 255); font-size: 24px;"></i></a></li>
+        <li style="margin-right: 10px;"><a href="https://discord.gg/FEWYtsg9ar"><i class="fa-brands fa-discord" style="color: rgb(255, 254, 255); font-size: 24px;"></i></a></li>
+        <li><a href="https://youtube.com/@erenjaeger380?si=FMwEBCjB6AmPZJ-F"><i class="fa-brands fa-youtube" style="color: rgb(255, 254, 255); font-size: 24px;"></i></a></li>
+    </ul>
+    <p>&copy; 2024 Into The Unknown Ventures. All rights reserved.</p>
+</footer>  
+
+  
+</body>
+</html>

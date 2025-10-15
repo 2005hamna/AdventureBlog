@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin/Signup Page</title> <!-- this is for the sign up page, or sign in page if the the users have already joined the website-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="joinus.css">
+</head>
+
+<body>
+    <style>
+        /* Additional CSS for dropdown menus */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            display: block;
+            text-align: left;
+            text-decoration: none; /* Remove underline from dropdown links */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .navigation .title a {
+    color: #fff; /* Set the text color */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 35px; /* Set the font size to 24 pixels */
+    font-family: 'Times New Roman', Times, serif; /* Set the font style to italic */
+    
+}
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+          <li class="title"><a href="#">Into The Unknown Ventures</a></li>
+          <li><a href="website(main).html" class="active">Home</a></li>
+          <li><a href="contact-form.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">About &#9660;</a>
+            <div class="dropdown-content">
+              <a href="aboutme.html">About Me</a>
+              <a href="aboutwebsite.html">About The Website</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Destinations &#9660;</a>
+            <div class="dropdown-content">
+              <a href="countries.html">Pakistan</a>
+              <a href="countries.html">Kuwait</a>
+              <a href="countries.html">Saudi Arabia</a>
+              <a href="countries.html">Qatar</a>
+              <a href="countries.html">UAE</a>
+              <a href="countries.html">Bahrain</a>
+              <a href="countries.html">Turkey</a>
+              <a href="countries.html">Azerbaijan</a>
+              <a href="countries.html">United Kingdom</a>
+              <!-- Add more countries as needed -->
+            </div>
+          </li>
+          <li><a href="joinus.html" class="join-us-button" target="_blank">Join Us</a></li>
+          <li><a href="healthyeating.html">Healthy Eating</a></li> <!-- Added Healthy Eating button -->
+        </ul>
+      </nav>
+      
+    
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+
+                <input type="text" placeholder="Name" required/>
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign in</h1>
+                <input type="email" placeholder="Email" required/>
+                <input type="password" placeholder="Password" required/>
+                <a href="website(side).html" target="_blank">Forgot your password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="joinus.js"></script>
+</body>
+
+</html>

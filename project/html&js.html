@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+  
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Cookie Consent Box using HTML CSS & JavaScript</title> 
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            background: #f3f3f3; 
+        } 
+
+        #consentBox { 
+            background: #fff; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+            text-align: center; 
+        } 
+
+        #consentBox.hide { 
+            opacity: 0; 
+            pointer-events: none; 
+            transform: scale(0.8); 
+            transition: all 0.3s ease; 
+        } 
+
+        ::selection { 
+            color: #fff; 
+            background: #ff6200; 
+        } 
+
+        #consentContent p { 
+            color: #858585; 
+            margin: 10px 0 20px 0; 
+        } 
+
+        #consentContent .buttons { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-top: 20px; 
+        } 
+
+        .consentButton, 
+        .rejectButton { 
+            padding: 12px 30px; 
+            border: none; 
+            outline: none; 
+            color: #fff; 
+            font-size: 16px; 
+            font-weight: 500; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            transition: all 0.3s ease; 
+        } 
+
+        .consentButton { 
+            background: #ff6200; 
+            margin-right: 10px; 
+        } 
+
+        .rejectButton { 
+            color: #111211; 
+            background: transparent; 
+            border: 2px solid #f95b00; 
+            text-decoration: none; 
+        } 
+
+        #consentBox img { 
+            max-width: 90px; 
+        } 
+
+        #consentHeader { 
+            font-size: 25px; 
+            font-weight: 600; 
+            margin-top: 10px; 
+        }
+    </style>
+</head> 
+  
+<body> 
+    <div id="consentBox"> 
+        <div id="consentContent"> 
+            <header id="consentHeader"> 
+                  Cookies: The choice is yours 
+            </header> 
+            <p> 
+                We use cookies to make our site work well 
+                for you and so we can continually improve it. 
+                <br>The cookies that are necessary to  
+                keep the site functioning are always on 
+            </p> 
+            <div class="buttons"> 
+                <button class="consentButton">Accept Cookies</button> 
+                <button class="rejectButton">Reject</button> 
+            </div> 
+        </div> 
+    </div> 
+
+    <script>
+        const consentBox = document.getElementById("consentBox"); 
+        const acceptBtn = document.querySelector(".consentButton"); 
+        const rejectBtn = document.querySelector(".rejectButton"); 
+
+        acceptBtn.onclick = () => { 
+            document.cookie = "CookieBy=GeeksForGeeks; max-age=" + 60 * 60 * 24; 
+            if (document.cookie) { 
+                consentBox.classList.add("hide"); 
+                window.location.href = "html&js.html"; // Redirect to the homepage
+            } else { 
+                alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser."); 
+            } 
+        }; 
+
+        rejectBtn.onclick = () => { 
+            alert("Cookies rejected. Some functionality may be limited."); 
+            consentBox.classList.add("hide"); 
+        }; 
+
+        let checkCookie = document.cookie.indexOf("CookieBy=GeeksForGeeks"); 
+        checkCookie !== -1 ? consentBox.classList.add("hide") : consentBox.classList.remove("hide");
+    </script>
+</body> 
+  
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 Boxes Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
+
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .box {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .box img {
+      max-width: 100%;
+      width: 400px;
+      height: 475px;
+      border-radius: 5px;
+    }
+
+    .box h3 {
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .box p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Additional CSS for dropdown menus */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000000;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      display: block;
+      text-align: left;
+      text-decoration: none; /* Remove underline from dropdown links */
+    }
+
+    .dropdown-content a:hover {
+      background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav.navigation {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%; /* Change width to 100% */
+    background-color: rgb(209, 109, 37);
+    padding: 10px 0; /* Adjust padding */
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Add this to make it fixed at the top */
+    top: 0; /* Add this to make it fixed at the top */
+    left: 0; /* Add this to make it fixed at the top */
+    z-index: 1000; /* Add this to ensure it's on top of other content */
+}
+
+
+    nav.navigation ul {
+      list-style: none;
+      margin: 0; /* Remove default margin */
+      padding: 0;
+      text-align: center;
+    }
+
+    nav.navigation ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav.navigation ul li:last-child {
+      margin-right: 0;
+    }
+
+    nav.navigation ul li.title a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 35px; /* Increased font size */
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-family: 'Times New Roman', Times, serif; /* Set the font style to italic */
+    }
+
+    nav.navigation ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    nav.navigation ul li a:hover {
+      background-color: #eab38a;
+    }
+    h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px; /* Added margin-top */
+  }
+  </style>
+</head>
+<body>
+  <nav class="navigation">
+    <ul>
+      <li class="title"><a href="#">Into The Unknown Ventures</a></li>
+      <li><a href="website(main).html" class="active">Home</a></li>
+      <li><a href="contact-form.html">Contact</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">About &#9660;</a>
+        <div class="dropdown-content">
+          <a href="aboutme.html">About Me</a>
+          <a href="aboutwebsite.html">About The Website</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#" class="dropbtn">Destinations &#9660;</a>
+        <div class="dropdown-content">
+          <a href="countries.html">Pakistan</a>
+          <a href="countries.html">Kuwait</a>
+          <a href="countries.html">Saudi Arabia</a>
+          <a href="countries.html">Qatar</a>
+          <a href="countries.html">UAE</a>
+          <a href="countries.html">Bahrain</a>
+          <a href="countries.html">Turkey</a>
+          <a href="countries.html">Azerbaijan</a>
+          <a href="countries.html">United Kingdom</a>
+          <!-- Add more countries as needed -->
+        </div>
+      </li>
+      <li><a href="joinus.html" class="join-us-button" target="_blank">Join Us</a></li>
+      <li><a href="healthyeating.html">Healthy Eating</a></li> <!-- Added Healthy Eating button -->
+    </ul>
+  </nav>
+
+  <h1 style="text-align: center; margin-bottom: 20px;">Share my journeys!</h1>
+
+  <div class="box-container">
+    <div class="box">
+      <img src="C:\project\WhatsApp Image 2024-04-17 at 13.18.32_fb2856ce.jpg" alt="">
+      <h3>Pakistan</h3>
+      <p>Exploring Pakistan's diverse beauty, I journeyed through its lush valleys and historic sites, a proud Pakistani on a voyage of discovery.</p>
+    </div>
+    <div class="box">
+      <img src="C:\project\WhatsApp Image 2024-04-20 at 19.07.01_1b0082da.jpg" alt="">
+      <h3>Kuwait</h3>
+      <p>Growing up in Kuwait, my childhood playground became my expedition ground, delving deeper into its culture and hidden gems with each passing year.</p>
+    </div>
+    <div class="box">
+      <img src="C:\project\WhatsApp Image 2024-04-20 at 19.15.43_950b3234.jpg" alt="">
+      <h3>Saudi Arab</h3>
+      <p>Living in Kuwait was more than a residency; it was a gateway to adventures waiting across the border in Saudi Arabia. A road trip to Saudi was not just a drive, but a thrilling journey beckoning with undiscovered marvels and endless possibilities.</p>
+    </div>
+    <div class="box">
+      <img src="C:\project\WhatsApp Image 2024-04-20 at 19.08.15_668dae29.jpg" alt="">
+      <h3>Qatar</h3>
+      <p>Qatar on the last Eid was a captivating escape, where tradition and modernity danced in harmony. Exploring its vibrant culture, I found a serene oasis amidst the bustling cityscape.</p>
+    </div>
+    <div class="box">
+        <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.43_8489fc6b.jpg" alt="">
+        <h3>UAE</h3>
+        <p>In the heart of UAE's dynamic landscape, Abu Dhabi became a childhood haven where skyscrapers and desert sands painted my memories. From the dazzling Corniche to the cultural treasures, UAE holds a piece of my past.</p>
+    </div>
+    <div class="box">
+        <img src="C:\project\WhatsApp Image 2024-04-20 at 19.06.02_a1c00828.jpg" alt="">
+        <h3>Bahrain</h3>
+        <p>Bahrain, a hidden gem of the Middle East, captivated me with its rich history and vibrant culture. Exploring its ancient forts and indulging in its culinary delights, I discovered a land where tradition meets modernity in perfect harmony.</p>
+    </div>
+    <div class="box">
+        <img src="C:\project\WhatsApp Image 2024-04-20 at 19.10.22_eeed9f69.jpg" alt="">
+        <h3>Turkey</h3>
+        <p>Turkey, a land where ancient history meets vibrant bazaars and breathtaking landscapes. From the bustling streets of Istanbul to the serene beauty of Cappadocia, Turkey left an indelible mark on my soul.</p>
+    </div>
+    <div class="box">
+        <img src="C:\project\WhatsApp Image 2024-04-20 at 19.14.51_443accef.jpg" alt="">
+        <h3>Azerbaijan</h3>
+        <p>Azerbaijan, a hidden gem at the crossroads of Europe and Asia, captivated me with its diverse landscapes and rich cultural heritage. From the ancient streets of Baku to the scenic beauty of Sheki, each moment was a journey through history and wonder.</p>
+    </div>
+    <div class="box">
+        <img src="C:\project\WhatsApp Image 2024-04-18 at 10.36.43_276c23c2.jpg" alt="">
+        <h3>UK</h3>
+        <p>The UK, a land steeped in history and charm, welcomed me with its bustling cities and picturesque countryside. From London's iconic landmarks to the serene beauty of the Lake District, my time here was a blend of modernity and tradition.</p>
+    </div>
+  </div>
+
+</body>
+</html>

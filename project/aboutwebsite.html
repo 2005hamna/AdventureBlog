@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<body>
+</head>
+<body>
+    <nav class="navigation">
+        <ul>
+          <li class="title"><a href="#">Into The Unknown Ventures</a></li>
+          <li><a href="website(main).html" class="active">Home</a></li>
+          <li><a href="contact-form.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">About &#9660;</a>
+            <div class="dropdown-content">
+              <a href="aboutme.html">About Me</a>
+              <a href="aboutwebsite.html">About The Website</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Destinations &#9660;</a>
+            <div class="dropdown-content">
+              <a href="countries.html">Pakistan</a>
+              <a href="countries.html">Kuwait</a>
+              <a href="countries.html">Saudi Arabia</a>
+              <a href="countries.html">Qatar</a>
+              <a href="countries.html">UAE</a>
+              <a href="countries.html">Bahrain</a>
+              <a href="countries.html">Turkey</a>
+              <a href="countries.html">Azerbaijan</a>
+              <a href="countries.html">United Kingdom</a>
+              <!-- Add more countries as needed -->
+            </div>
+          </li>
+          <li><a href="joinus.html" class="join-us-button" target="_blank">Join Us</a></li>
+          <li><a href="healthyeating.html">Healthy Eating</a></li> <!-- Added Healthy Eating button -->
+        </ul>
+      </nav>
+      
+    
+
+    </style>
+    <div class="about-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="about-img">
+                        <img src="C:\project\WhatsApp Image 2024-04-16 at 05.39.28_83b35294.jpg" alt="">
+                        <p>Saudi Arabia, Taif</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-lg-offset-1">
+                    <div class="about-text">
+                        <h2>About The Website</h2>
+                        <p>Welcome to our travel blog! I'm thrilled to introduce you to this platform, which I launched with a deep passion for exploration and a desire to share my adventures with fellow travel enthusiasts. What began as a personal project has now blossomed into a vibrant community of like-minded individuals, all drawn together by our love for discovering new destinations, cultures, and experiences. It's been an incredible journey watching this website grow in popularity, as more and more adventurers join us in our quest for discovery. From the initial concept to the polished website you see today, it took countless hours of dedication and creativity to bring this vision to life. But seeing the positive impact it has on our readers makes every moment worth it. Thank you for being a part of our journey, and here's to many more adventures together!</p>
+                        <a href="website(main).html">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+.about-area{
+    padding-top: 5%;
+}
+body {
+      font-family: 'Montserrat', sans-serif;
+
+  }
+  .about-img {
+    position: relative;
+    margin-top: 90px; /* Add margin-top to bring the image down */
+}
+
+
+.about-img:before{
+    position: absolute;
+    content: '';
+    right: -30px;
+    top: 30px;
+    border: 9px solid rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.about-img img{
+    width: 100%;
+
+}
+.about-img {
+    text-align: center; /* Align the image and text to the center */
+}
+
+.about-img img {
+    max-width: 100%; /* Ensure the image does not exceed its container width */
+    height: auto; /* Maintain the aspect ratio of the image */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+.about-img p {
+    margin-top: 10px; /* Add some space between the image and the text */
+    font-style: italic; /* Optionally style the text in italic */
+}
+
+.about-text{
+    padding-top: 20%;
+}
+.about-text h2{
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+}
+.about-text p{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    color: black;
+}
+.about-text a{
+    background: #fa8a12;
+    color: #fff;
+    padding: 7px 15px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+body {
+    background-color: #EDEDED !important;
+}
+
+    /* Additional CSS for dropdown menus */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+        text-decoration: none; /* Remove underline from dropdown links */
+    }
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+nav.navigation {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%; /* Change width to 100% */
+    background-color: rgb(209, 109, 37);
+    padding: 10px 0; /* Adjust padding */
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Add this to make it fixed at the top */
+    top: 0; /* Add this to make it fixed at the top */
+    left: 0; /* Add this to make it fixed at the top */
+    z-index: 1000; /* Add this to ensure it's on top of other content */
+}
+
+    nav.navigation ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav.navigation ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    nav.navigation ul li:last-child {
+        margin-right: 0;
+    }
+
+    nav.navigation ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 15px;
+        border-radius: 5px;
+    }
+
+    nav.navigation ul li a:hover {
+        background-color: #eab38a;
+    }
+
+
+
+    .navigation .title a {
+        color: #fff; /* Set the text color */
+        text-decoration: none; /* Remove underline from the link */
+        font-size: 35px; /* Set the font size to 24 pixels */
+        font-family: 'Times New Roman', Times, serif; /* Set the font style to italic */
+    }
+
+
+
+
+</style>
+</html>

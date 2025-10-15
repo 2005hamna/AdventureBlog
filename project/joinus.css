@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+/* Global styles */
+* {
+    box-sizing: border-box; /* Apply box-sizing to all elements */
+}
+
+/* Body styles */
+body {
+    font-family: 'Montserrat', sans-serif; /* Set font family */
+    background: #c8c8c8; /* Set background color */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Vertically center items */
+    align-items: center; /* Horizontally center items */
+    height: 100vh; /* Take up full viewport height */
+    margin: -20px 0 50px; /* Adjust margin */
+    margin-top: 20px; /* Add extra top margin */
+}
+
+/* Heading styles */
+h1 {
+    font-weight: bold; /* Set font weight to bold */
+    margin: 0; /* Remove default margin */
+}
+
+/* Paragraph styles */
+p {
+    font-size: 14px; /* Set font size */
+    font-weight: 100; /* Set font weight */
+    line-height: 20px; /* Set line height */
+    letter-spacing: .5px; /* Set letter spacing */
+    margin: 20px 0 30px; /* Set margin */
+}
+
+/* Span styles */
+span {
+    font-size: 12px; /* Set font size */
+}
+
+
+a {
+    color: #0e263d;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.container {
+    background: #ff7002;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .2), 0 10px 10px rgba(0, 0, 0, .2);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+.form-container form {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding:  0 0px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.social-container {
+    margin: 10px 0;
+}
+
+.social-container a {
+    border: 1px solid #ffa024;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.form-container input {
+    background: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 85%;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #c00e0e;
+    background: #f68d1e;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background: transparent;
+    border-color: #fff;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+
+.sign-in-container {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index: 1;
+    opacity: 0;
+}
+
+/* Container for the overlay */
+.overlay-container {
+    position: absolute; /* Position absolutely within its containing element */
+    top: 0; /* Align to the top */
+    left: 50%; /* Move to the center horizontally */
+    width: 50%; /* Take up half of the width of the containing element */
+    height: 100%; /* Take up full height */
+    overflow: hidden; /* Hide overflow content */
+    transition: transform .6s ease-in-out; /* Smooth transition effect */
+    z-index: 100; /* Ensure it's on top of other content */
+}
+
+/* Overlay background */
+.overlay {
+    background: #ff416c; /* Background color */
+    background: linear-gradient(to right, #f4b16a, #f4b16a) no-repeat 0 0 / cover; /* Gradient background */
+    color: #fff; /* Text color */
+    position: relative; /* Position relatively within its containing element */
+    left: -100%; /* Initially move to the left outside the container */
+    height: 100%; /* Take up full height */
+    width: 200%; /* Take up double width to cover the container */
+    transform: translateY(0); /* Initially no vertical translation */
+    transition: transform .6s ease-in-out; /* Smooth transition effect */
+}
+
+/* Overlay panel */
+.overlay-panel {
+    position: absolute; /* Position absolutely within its containing element */
+    top: 0; /* Align to the top */
+    display: flex; /* Display as flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Vertically center items */
+    align-items: center; /* Horizontally center items */
+    padding: 0 40px; /* Padding */
+    height: 100%; /* Take up full height */
+    width: 50%; /* Take up half of the width of the containing element */
+    text-align: center; /* Center-align text */
+    transform: translateY(0); /* Initially no vertical translation */
+    transition: transform .6s ease-in-out; /* Smooth transition effect */
+}
+
+/* Overlay panel on the right */
+.overlay-right {
+    right: 0; /* Align to the right */
+    transform: translateY(0); /* Initially no vertical translation */
+}
+
+/* Overlay panel on the left */
+.overlay-left {
+    transform: translateY(-20%); /* Initially move up slightly */
+}
+
+
+/* Move signin to right */
+.container.right-panel-active .sign-in-container {
+    transform: translateY(100%);
+}
+
+/* Move overlay to left */
+.container.right-panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+/* Bring signup over signin */
+.container.right-panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
+
+/* Move overlay back to right */
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+/* Bring back the text to center */
+.container.right-panel-active .overlay-left {
+    transform: translateY(0);
+}
+
+/* Same effect for right */
+.container.right-panel-active .overlay-right {
+    transform: translateY(20%);
+}
+nav.navigation {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%; /* Set width to 100% to span the full width of the page */
+    background-color: rgb(209, 109, 37);
+    padding: 10px 20px;
+    margin: 0; /* Add this to remove any default margin */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Add position fixed to fix the navigation bar at the top */
+    top: 0; /* Set top to 0 to position it at the top of the page */
+    left: 0; /* Set left to 0 to align it to the left edge */
+    z-index: 999; /* Set z-index to ensure it appears above other content */
+}
+
+nav.navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav.navigation ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav.navigation ul li:last-child {
+    margin-right: 0;
+}
+
+nav.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav.navigation ul li a:hover {
+    background-color: #eab38a;
+}
+
+/* Search bar styles */
+.search-bar {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-bar input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #ddcccc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-bar input[type="submit"]:hover {
+    background-color: #555;
+}
